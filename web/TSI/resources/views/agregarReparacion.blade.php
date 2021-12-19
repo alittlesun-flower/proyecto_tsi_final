@@ -4,7 +4,7 @@
         <div class="col-12 col-md-6 col-lg-5 mx-auto">
             <div class="card">
                 <div class="card-header bg-warning text-black">
-                    <span>Añadir servicio</span>
+                    <span>Añadir reparación</span>
                 </div>
                 <div class="card-body">
                     <div class="mb-3">
@@ -29,29 +29,34 @@
                         <input type="text" id="anno-txt" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label for="servicios-cbx" class="form-label">Servicio</label>
-                        <select class="form-select" id="servicios-cbx">
-                            <option value="jardines">Regadio de jardines</option>
-                            <option value="iluminacion">Iluminación</option>
+                        <label for="tipo-cbx" class="form-label">Tipo de reparación</label>
+                        <select class="form-select" id="tipo-cbx">
+                            <option value="Correctivo">Correctivo</option>
+                            <option value="Preventivo">Preventivo</option>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="consumo-num" class="form-label">Cantidad de consumo</label>
-                        <input type="number" id="consumo-num" class="form-control">
+                        <label for="nombrerep-txt" class="form-label">Nombre de la reparación</label>
+                        <input type="text" id="nombrerep-txt" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label for="monto-num" class="form-label">Monto</label>
-                        <input type="number" id="monto-num" class="form-control">
+                        <label for="descripcion-txt" class="form-label">Descripción de la reparación</label>
+                        <textarea id ="descripcion-txt" class="form-control">
+                        </textarea>
                     </div>  
+                    <div class="mb-3">
+                        <label for="montorep-num" class="form-label">Monto</label>
+                        <input type="number" id="montorep-num" class="form-control">
+                    </div> 
                 </div>
                 <div class="card-footer d-grid gap-1 ">
-                    <button id="servi-btn" class="btn btn-warning">Registrar servicio</button>
+                    <button id="repa-btn" class="btn btn-warning">Registrar reparación</button>
                 </div>
             </div>
         </div>
     </div>    
 @endsection
 @section('javascript')
-    <script src="{{asset('js/agregarServicio.js')}}"></script>
-    <script src="{{asset('js/servicios/serviciosService.js')}}"></script>
+    <script src="{{asset('js/agregarReparacion.js')}}"></script>
+    <script src="{{asset('js/servicios/reparacionesService.js')}}"></script>
 @endsection

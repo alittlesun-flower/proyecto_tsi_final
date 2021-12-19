@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'home')->name('home');
+//SERVICIOS
 Route::view('/agregarServicio', 'agregarServicio')->name('agregarServicio');
 Route::view('/verServicio', 'verServicio')->name('verServicio');
+//REPARACION
+Route::view('/agregarReparacion', 'agregarReparacion')->name('agregarReparacion');
+Route::view('/verReparacion', 'verReparacion')->name('verReparacion');
 

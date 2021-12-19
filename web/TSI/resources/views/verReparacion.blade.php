@@ -8,13 +8,14 @@
                         <td>Mes</td>
                         <td>Año</td>
                         <td>Tipo de servicio</td>
-                        <td>Cantidad de consumo</td>
+                        <td>Nombre</td>
+                        <td>Descripcion</td>
                         <td>Monto total</td>
                         <td>Accion 1</td>
                         <td>Accion 2</td>
                     </tr>
                 </thead>
-                <tbody id="tbody-servicio">
+                <tbody id="tbody-reparacion">
 
                 </tbody>
             </table>
@@ -44,27 +45,32 @@
                 <input type="text" id="anno-txt" class="form-control">
             </div>
             <div class="mb-3">
-                <label for="servicios-cbx" class="form-label">Servicio</label>
-                <select class="form-select" id="servicios-cbx">
-                    <option value="jardines">Regadio de jardines</option>
-                    <option value="iluminacion">Iluminación</option>
+                <label for="tipo-cbx" class="form-label">Tipo de reparacion</label>
+                <select class="form-select" id="tipo-cbx">
+                    <option value="Correctivo">Correctivo</option>
+                    <option value="Preventivo">Preventivo</option>
                 </select>
             </div>
             <div class="mb-3">
-                <label for="consumo-num" class="form-label">Cantidad de consumo</label>
-                <input type="number" id="consumo-num" class="form-control">
+                <label for="nombrerep-txt" class="form-label">Nombre de la reparación</label>
+                <input type="text" id="nombrerep-txt" class="form-control">
             </div>
             <div class="mb-3">
-                <label for="monto-num" class="form-label">Monto</label>
-                <input type="number" id="monto-num" class="form-control">
+                <label for="descripcion-txt" class="form-label">Descripción de la reparación</label>
+                <textarea id ="descripcion-txt" class="form-control">
+                </textarea>
+            </div> 
+            <div class="mb-3">
+                <label for="montorep-num" class="form-label">Monto</label>
+                <input type="number" id="montorep-num" class="form-control">
             </div>
             <div class="card-footer d-grid gap-1 ">
-                <button id="actualizar-btn" class="btn btn-warning">Registrar servicio</button>
+                <button id="reparacion-btn" class="btn btn-warning">Registrar reparación</button>
             </div>
         </div>
     </div>
 @endsection
 @section('javascript')
-    <script src="{{ asset('js/servicios/serviciosService.js') }}"></script>
-    <script src="{{ asset('js/verServicio.js') }}"></script>
+    <script src="{{ asset('js/servicios/reparacionesService.js') }}"></script>
+    <script src="{{ asset('js/verReparacion.js') }}"></script>
 @endsection

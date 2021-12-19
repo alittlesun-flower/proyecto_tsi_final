@@ -25,7 +25,17 @@
                                         <a class="dropdown-item" href="{{route('verServicio')}}">Ver Servicios</a>
                                     </li>
                                 </ul>
-                                
+                            </li>
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Reparación
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                  <li>
+                                      <a class="dropdown-item" href="{{route('agregarReparacion')}}">Agregar reparación</a>
+                                      <a class="dropdown-item" href="{{route('verReparacion')}}">Ver reparaciones</a>
+                                  </li>
+                              </ul>
                             </li>
                             <!--<li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
