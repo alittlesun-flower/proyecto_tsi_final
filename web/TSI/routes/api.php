@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\ReparacionController;
+use App\Http\Controllers\DomicilioController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +29,11 @@ Route::post("reparacion/post",[ReparacionController::class, 'crearReparacion']);
 Route::get("reparacion/obtenerPorId",[ReparacionController::class, 'obtenerPorId']);
 Route::post("reparacion/actualizar",[ReparacionController::class, 'actualizarReparacion']);
 Route::post("reparacion/eliminar",[ReparacionController::class, 'eliminarReparacion']);
+//DOMICILIO
+Route::get("domicilio/get",[DomicilioController::class, 'getDomicilios']);
+Route::post("domicilio/post",[DomicilioController::class, 'crearDomicilio']);
+Route::get("domicilio/obtenerPorId",[DomicilioController::class, 'obtenerPorId']);
+Route::post("domicilio/actualizar",[DomicilioController::class, 'actualizarDomicilio']);
+Route::post("domicilio/eliminar",[DomicilioController::class, 'eliminarDomicilio']);
 
 

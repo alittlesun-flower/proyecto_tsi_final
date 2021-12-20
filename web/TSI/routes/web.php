@@ -20,4 +20,7 @@ Route::view('/verServicio', 'verServicio')->name('verServicio');
 //REPARACION
 Route::view('/agregarReparacion', 'agregarReparacion')->name('agregarReparacion');
 Route::view('/verReparacion', 'verReparacion')->name('verReparacion');
+//DOMICILIO
+Route::view('/agregarDomicilio', 'agregarDomicilio')->name('agregarDomicilio');
+Route::view('/verDomicilio', 'verDomicilio')->name('verDomicilio');
 

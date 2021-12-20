@@ -20,7 +20,7 @@ class Gasto extends Model
         return $this->belongsTo(Domicilio::class);
     }
     public function boletas(){
-        return $this->belongsTo(Boletas::class);
+        return $this->hasMany(Boletas::class);
     }
     
 }

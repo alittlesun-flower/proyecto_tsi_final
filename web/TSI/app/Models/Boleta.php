@@ -12,10 +12,11 @@ class Boleta extends Model
     protected $table = "boletas";
     //boleta
     public function gastos(){
-        return $this->hasMany(Gasto::class);
+        return $this->belongsTo(Gasto::class);
     }
     public function domicilios(){
         return $this->belongsTo(Domicilio::class);
     }
+    
     public $primaryKey = 'id';
 }

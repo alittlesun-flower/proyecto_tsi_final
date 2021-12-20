@@ -19,8 +19,6 @@ class CreateGastosTable extends Migration
             $table->foreign('servicio_id')->references('id')->on("servicios");
             $table->unsignedBigInteger('reparacion_id');
             $table->foreign('reparacion_id')->references('id')->on("reparaciones");
-            $table->unsignedBigInteger('boleta_id');
-            $table->foreign('boleta_id')->references('id')->on("boletas");
             $table->unsignedBigInteger('domicilio_id');
             $table->foreign('domicilio_id')->references('id')->on("domicilios");
             $table->String("mes", 10);
@@ -28,7 +26,7 @@ class CreateGastosTable extends Migration
             $table->timestamps();
         });
     }
-
+    //register y login, operaciones (pueda generar boleta), y al final las validaciones/integridad referencial
     /**
      * Reverse the migrations.
      *
