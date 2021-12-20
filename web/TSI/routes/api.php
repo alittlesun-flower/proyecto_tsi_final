@@ -7,6 +7,7 @@ use App\Http\Controllers\ReparacionController;
 use App\Http\Controllers\DomicilioController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,6 +18,10 @@ use App\Http\Controllers\DomicilioController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+//LOGIN
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
 //SERVICIO
 Route::get("servicio/get",[ServicioController::class, 'getServicios']);
 Route::post("servicio/post",[ServicioController::class, 'crearServicio']);
