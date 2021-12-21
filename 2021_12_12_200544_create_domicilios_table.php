@@ -17,7 +17,7 @@ class CreateDomiciliosTable extends Migration
             $table->id();
             $table->smallInteger('numero');
             $table->String('correo', 100);
-            
+            $table->String('metros',20);
             $table->timestamps();
         });
     }

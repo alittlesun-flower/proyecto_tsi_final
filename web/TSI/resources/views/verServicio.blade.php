@@ -39,10 +39,9 @@
                     <option value="Diciembre">Diciembre</option>
                 </select>
             </div>
-            <div class="mb-3">
-                <label for="anno-txt" class="form-label">Año</label>
-                <input type="text" id="anno-txt" class="form-control">
-            </div>
+            <select name="anno-cbx" id="anno-cbx" class="form-select">
+                <option value="2021">2021</option>
+            </select>
             <div class="mb-3">
                 <label for="servicios-cbx" class="form-label">Servicio</label>
                 <select class="form-select" id="servicios-cbx">

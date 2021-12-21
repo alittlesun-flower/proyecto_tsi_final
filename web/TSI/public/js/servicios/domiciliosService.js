@@ -2,8 +2,8 @@ getDomicilios = async()=>{
 	let resp = await axios.get("api/domicilio/get");
 	return resp.data;
 }
-crearDomicilio= async(servi)=>{
-	let resp = await axios.post("api/domicilio/post", servi, {
+crearDomicilio= async(domi)=>{
+	let resp = await axios.post("api/domicilio/post", domi, {
 	    headers:{
 		    'Content-Type': 'application/json'
 	    }
@@ -26,9 +26,9 @@ const obtenerPorId = async (id)=>{
     let resp = await axios.get(`api/domicilio/obtenerPorId?id=${id}`);
     return resp.data;
 }
-const actualizarDomicilio = async(servi)=>{
+const actualizarDomicilio = async(domi)=>{
     try{
-        let resp = await axios.post("api/domicilio/actualizar", servi, {
+        let resp = await axios.post("api/domicilio/actualizar", domi, {
             headers:{
                 "Content-Type": "application/json"
             }

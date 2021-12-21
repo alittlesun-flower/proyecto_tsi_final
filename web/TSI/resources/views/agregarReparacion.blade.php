@@ -25,8 +25,10 @@
                         </select> 
                     </div>
                     <div class="mb-3">
-                        <label for="anno-txt" class="form-label">Año</label>
-                        <input type="text" id="anno-txt" class="form-control">
+                        <label for="anno-cbx" class="form-label">Año</label>
+                        <select name="anno-cbx" id="anno-cbx" class="form-select">
+                            <option value="2021">2021</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="tipo-cbx" class="form-label">Tipo de reparación</label>

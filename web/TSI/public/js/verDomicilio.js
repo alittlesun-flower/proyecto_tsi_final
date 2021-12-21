@@ -19,6 +19,8 @@ const actualizar = async function(){
     let molde = this.parentNode.parentNode;
     domicilio.numero = molde.querySelector("#numero-num").value;
     domicilio.correo = molde.querySelector("#correo-txt").value;
+    domicilio.metros = molde.querySelector("#metros-cbx").value;
+
 
     await actualizarDomicilio(domicilio);
     await Swal.close();
@@ -32,6 +34,8 @@ const iniciarActualizacion = async function(){
     let molde = document.querySelector(".molde-modificar").cloneNode(true);
     molde.querySelector("#numero-num").value = domicilio.numero;
     molde.querySelector("#correo-txt").value = domicilio.correo;
+    molde.querySelector("#metros-cbx").value = domicilio.metros;
+
     
     molde.querySelector("#domi-btn").idDomicilio = idDomicilio;
     molde.querySelector("#domi-btn").addEventListener("click", actualizar);
@@ -51,6 +55,8 @@ const cargarTabla = (domicilio)=>{
         tdNumero.innerText = domicilio[i].numero
         let tdCorreo = document.createElement("td");
         tdCorreo.innerText = domicilio[i].correo;
+        let tdMetro = document.createElement("td");
+        tdMetro.innerText = domicilio[i].metros;
         let tdAccion1 = document.createElement("td");
         //ELIMINAR
         let botonEliminar = document.createElement("button");
@@ -71,6 +77,7 @@ const cargarTabla = (domicilio)=>{
 
         tr.appendChild(tdNumero);
         tr.appendChild(tdCorreo);
+        tr.appendChild(tdMetro);
         tr.appendChild(tdAccion1);
         tr.appendChild(tdAccion2);
 

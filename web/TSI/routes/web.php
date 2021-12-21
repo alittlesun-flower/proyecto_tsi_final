@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsuariosController;
+use App\Http\Controllers\BoletaController;
+
+
 
 
 
@@ -33,4 +36,8 @@ Route::view('/verDomicilio', 'verDomicilio')->middleware('auth')->name('verDomic
 //BOLETA
 Route::view('/agregarBoleta', 'agregarBoleta')->middleware('auth')->name('agregarBoleta');
 Route::view('/verBoleta', 'verBoleta')->middleware('auth')->name('verBoleta');
+
+//PDF
+Route::get('/boletas/tabla-boletas',[BoletaController::class,'tablaBoletas'])->name('boletas.tabla-boletas');
+Route::get('/boletas/descargar-tabla-boletas',[BoletaController::class,'descargarTablaBoletas'])->name('boletas.descargar-tabla-boletas');
 

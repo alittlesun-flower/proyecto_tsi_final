@@ -70,6 +70,9 @@
                                         </div>
                                     </form>
                                 </div>
+                                <div class="card-footer">
+                                    <a class="nav-link active" aria-current="page" href="{{route('home.login')}}">Inicio de sesión</a>
+                                </div>
                             </div>
 
                             {{-- validacion --}}

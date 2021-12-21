@@ -16,10 +16,10 @@
                             <small>Último inicio de sesión: {{date('d-m-Y',strtotime(Auth::user()->ultimo_login))}} a las {{date('H:i:s',strtotime(Auth::user()->ultimo_login))}}</b></small>
                             <p>Te encuentras en el inicio de la aplicación, a continuación, avanza con lo siguiente:</p>
                             <img class="img-fluid" src="{{asset('img/portada.jpg')}}" alt="" srcset="">
-                            <p>Para comenzar a utilizar la aplicación, debes añadir:
+                            <p>Para comenzar a utilizar la aplicación, puedes añadir:
                                 <ul>
                                     <li>1) Servicios</li>
-                                    <li>2) Reparación (en caso de ser necesaria)</li>
+                                    <li>2) Reparación</li>
                                     <li>3) Domicilios</li>
                                     <li>4) Y por último, enviar boleta</li>
                                 </ul>

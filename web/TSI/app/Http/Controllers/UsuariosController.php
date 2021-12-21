@@ -112,7 +112,7 @@ class UsuariosController extends Controller
             return redirect()->route('home.index');
         }else{
             //credenciales incorrectas
-            return back()->withErrors('Credenciales incorrectas o cuenta desactivada');
+            return back()->withErrors('Credenciales incorrectas o cuenta no registrada');
         }
     }
 

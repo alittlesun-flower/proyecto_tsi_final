@@ -2,8 +2,8 @@ getReparaciones = async()=>{
 	let resp = await axios.get("api/reparacion/get");
 	return resp.data;
 }
-crearReparacion = async(servi)=>{
-	let resp = await axios.post("api/reparacion/post", servi, {
+crearReparacion = async(repa)=>{
+	let resp = await axios.post("api/reparacion/post", repa, {
 	    headers:{
 		    'Content-Type': 'application/json'
 	    }
@@ -26,9 +26,9 @@ const obtenerPorId = async (id)=>{
     let resp = await axios.get(`api/reparacion/obtenerPorId?id=${id}`);
     return resp.data;
 }
-const actualizarReparacion = async(servi)=>{
+const actualizarReparacion = async(repa)=>{
     try{
-        let resp = await axios.post("api/reparacion/actualizar", servi, {
+        let resp = await axios.post("api/reparacion/actualizar", repa, {
             headers:{
                 "Content-Type": "application/json"
             }

@@ -16,6 +16,8 @@ class DomicilioController extends Controller
         $domicilio = new Domicilio();
         $domicilio->numero=$input["numero"];
         $domicilio->correo=$input["correo"];
+        $domicilio->metros=$input["metros"];
+
         $domicilio->save();
         return $domicilio;
     }
@@ -38,6 +40,8 @@ class DomicilioController extends Controller
         $domicilio = Domicilio::findOrFail($id);
         $domicilio->numero=$input["numero"];
         $domicilio->correo=$input["correo"];
+        $domicilio->metros=$input["metros"];
+
         $domicilio->save();
         return $domicilio;
     }    

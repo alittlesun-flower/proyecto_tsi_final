@@ -14,10 +14,21 @@
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="correo-cbx" class="form-label">Correo</label>
-                        <select name="correo-cbx" id="correo-cbx" class="form-control">
-                            
-                        </select>
+                        <label for="mes-cbx" class="form-label">Mes</label>
+                        <select class="form-select" id="mes-cbx">
+                            <option value="Enero">Enero</option>
+                            <option value="Febrero">Febrero</option>
+                            <option value="Marzo">Marzo</option>
+                            <option value="Abril">Abril</option>
+                            <option value="Mayo">Mayo</option>
+                            <option value="Junio">Junio</option>
+                            <option value="Julio">Julio</option>
+                            <option value="Agosto">Agosto</option>
+                            <option value="Septiembre">Septiembre</option>
+                            <option value="Octubre">Octubre</option>
+                            <option value="Noviembre">Noviembre</option>
+                            <option value="Diciembre">Diciembre</option>
+                        </select> 
                     </div>
                     <div class="mb-3">
                         <label for="anno-cbx" class="form-label">Año</label>
@@ -31,7 +42,7 @@
                     </div> 
                     
                 <div class="card-footer d-grid gap-1 ">
-                    <button id="domi-btn" class="btn btn-warning">Envitar boleta</button>
+                    <button id="boleta-btn" class="btn btn-warning">Enviar boleta</button>
                 </div>
             </div>
         </div>
@@ -39,5 +50,5 @@
 @endsection
 @section('javascript')
     <script src="{{asset('js/agregarBoleta.js')}}"></script>
-    <script src="{{asset('js/servicios/domiciliosService.js')}}"></script>
+    <script src="{{asset('js/servicios/boletasService.js')}}"></script>
 @endsection

@@ -14,6 +14,7 @@
     <body>
       <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+            @csrf
             <div class="container-fluid">
               <a class="navbar-brand" href="{{route('home.index')}}">
                 <img class="logo" src="{{asset('img/logo.png')}}">

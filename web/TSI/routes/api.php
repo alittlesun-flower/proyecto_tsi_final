@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\ReparacionController;
 use App\Http\Controllers\DomicilioController;
+use App\Http\Controllers\BoletaController;
+
 
 
 
@@ -40,5 +42,10 @@ Route::post("domicilio/post",[DomicilioController::class, 'crearDomicilio']);
 Route::get("domicilio/obtenerPorId",[DomicilioController::class, 'obtenerPorId']);
 Route::post("domicilio/actualizar",[DomicilioController::class, 'actualizarDomicilio']);
 Route::post("domicilio/eliminar",[DomicilioController::class, 'eliminarDomicilio']);
+//BOLETA
+Route::get("boleta/get",[BoletaController::class, 'getBoletas']);
+Route::post("boleta/post",[BoletaController::class, 'crearBoleta']);
+Route::get("boleta/obtenerPorId",[BoletaController::class, 'obtenerPorId']);
+Route::post("boleta/eliminar",[BoletaController::class, 'eliminarBoleta']);
 
 
