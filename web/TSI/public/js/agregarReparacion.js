@@ -9,11 +9,17 @@ document.querySelector("#repa-btn").addEventListener("click", async()=>{
     if(nombre === ""){
         errores.push("Debes de ingresar nombre para la reparación")
     }
+    if(!isNaN(nombre) && nombre != ""){
+        errores.push("Un titulo no puede ser numerico");
+    }
     if(descripcion === ""){
         errores.push("Debes de ingresar una descripción")
     }
     if(monto === ""){
         errores.push("Debes de ingresar monto")
+    }
+    if(monto<0){
+        errores.push("El monto no puede ser negativo")
     }
     if(errores.length == 0){
         let repa = {};

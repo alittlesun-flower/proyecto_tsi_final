@@ -6,6 +6,9 @@ document.querySelector("#domi-btn").addEventListener("click", async()=>{
     if(numero === ""){
         errores.push("Debes de ingresar un número para el domicilio")
     }
+    if(numero < 0){
+        errores.push("El número del domicilio no puede ser negativo")
+    }
     if(correo === ""){
         errores.push("Debes de ingresar un correo para el domicilio")
     }

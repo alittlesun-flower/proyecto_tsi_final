@@ -11,6 +11,12 @@ document.querySelector("#servi-btn").addEventListener("click", async()=>{
     if(monto === ""){
         errores.push("Debes de ingresar monto")
     }
+    if(consumo<0){
+        errores.push("El consumo no puede ser negativo")
+    }
+    if(monto<0){
+        errores.push("El monto no puede ser negativo")
+    }
     if (errores.length == 0){
         let servi = {};
         servi.mes = mes;

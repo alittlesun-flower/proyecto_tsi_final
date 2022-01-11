@@ -26,7 +26,7 @@
                     <!--formulario-->
                         <div class="col-lg-8 bg-white d-flex flex-column justify-content-center py-3">
                             <h4>Registrarse</h4>
-                            <small>Proporcione sus datos para el inicio de sesión</small>
+                            <small>Proporcione sus datos para registrar un usuario</small>
                             <div class="card">
                                 <div class="card-body">
                                     <form method="POST" action="{{ route('usuarios.store') }}">

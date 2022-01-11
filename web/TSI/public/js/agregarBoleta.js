@@ -24,17 +24,29 @@ document.querySelector("#boleta-btn").addEventListener("click", async()=>{
     let monto = document.querySelector("#montorep-num").value.trim();
     let mes = document.querySelector("#mes-cbx").value.trim();
     let anno = document.querySelector("#anno-cbx").value;
+    let errores = [];
+    if(monto === ""){
+        errores.push("Debes de ingresar el monto");
+    }
+    if(errores.length == 0){
+        let bole = {};
+        bole.monto = monto;
+        bole.mes = mes;
+        bole.anno = anno;
+        bole.domicilio_id = domicilio_id;
+        let res = await crearBoleta(bole);
+        await Swal.fire("Boleta enviada", "Boleta enviada con exito", "info")
+        window.location.href = "verBoleta";
+    }else{
+        Swal.fire({
+            title: "Errores de validación",
+            icon: "warning",
+            html: errores.join("<br />") 
+        });
+    }
 
 
-
-    let bole = {};
-    bole.monto = monto;
-    bole.mes = mes;
-    bole.anno = anno;
-    bole.domicilio_id = domicilio_id;
-    let res = await crearBoleta(bole);
-    await Swal.fire("Boleta enviada", "Boleta enviada con exito", "info")
-    window.location.href = "verBoleta";
+    
 });
 
 document.addEventListener("DOMContentLoaded", ()=>{
