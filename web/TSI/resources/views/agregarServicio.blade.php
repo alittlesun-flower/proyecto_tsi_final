@@ -12,23 +12,11 @@
                         <select class="form-select" id="mes-cbx">
                             <option value="Enero">Enero</option>
                             <option value="Febrero">Febrero</option>
-                            <option value="Marzo">Marzo</option>
-                            <option value="Abril">Abril</option>
-                            <option value="Mayo">Mayo</option>
-                            <option value="Junio">Junio</option>
-                            <option value="Julio">Julio</option>
-                            <option value="Agosto">Agosto</option>
-                            <option value="Septiembre">Septiembre</option>
-                            <option value="Octubre">Octubre</option>
-                            <option value="Noviembre">Noviembre</option>
-                            <option value="Diciembre">Diciembre</option>
                         </select> 
                     </div>
                     <div class="mb-3">
-                        <label for="anno-cbx" class="form-label">Año</label>
-                        <select name="anno-cbx" id="anno-cbx" class="form-select">
-                            <option value="2021">2021</option>
-                        </select>
+                        <label for="anno-txt" class="form-label">Año</label>
+                        <input type="text" id="anno-txt" class="form-control" disabled="true">
                     </div>
                     <div class="mb-3">
                         <label for="servicios-cbx" class="form-label">Servicio</label>

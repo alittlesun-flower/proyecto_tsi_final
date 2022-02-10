@@ -11,8 +11,9 @@
                         <td>Nombre</td>
                         <td>Descripcion</td>
                         <td>Monto total</td>
+                        <td>Estado</td>
                         <td>Accion 1</td>
-                        <td>Accion 2</td>
+
                     </tr>
                 </thead>
                 <tbody id="tbody-reparacion">
@@ -43,7 +44,7 @@
             <div class="mb-3">
                 <label for="anno-cbx" class="form-label">Año</label>
                 <select name="anno-cbx" id="anno-cbx" class="form-select">
-                    <option value="2021">2021</option>
+                    <option value="2021">2022</option>
                 </select>
             </div>
             <div class="mb-3">

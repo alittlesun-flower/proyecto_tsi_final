@@ -19,4 +19,5 @@ class Usuario extends Authenticable
     public function rol(){
         return $this->belongsTo('App\Models\Rol');
     }
+    public $primaryKey = 'id';
 }

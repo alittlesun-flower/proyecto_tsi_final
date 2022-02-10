@@ -19,19 +19,27 @@
             <table class="table table-bordered table-sm">
                 <thead>
                     <tr>
-                        <td>Monto</td>
+                        <td>Monto Total</td>
+                        <td>Monto Domicilio</td>
+                        <td>Monto Regadio</td>
+                        <td>Monto Iluminacion</td>
+                        <td>Correo </td>
                         <td>Mes</td>
                         <td>Año</td>
                         <td>Domicilio</td>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($tablaBoletas as $boleta)
+                    @foreach ($boletas as $boleta)
                         <tr>
                             <td>{{ $boleta['monto'] }}</td>
+                            <td>{{ $boleta['monto_domicilio'] }}</td>
+                            <td>{{ $boleta['monto_regadio'] }}</td>
+                            <td>{{ $boleta['monto_iluminacion'] }}</td>
+                            <td>{{ $boleta['correo'] }}</td>
                             <td>{{ $boleta['mes'] }}</td>
                             <td>{{ $boleta['anno'] }}</td>
-                            <td>{{ $boleta['domicilio_id'] }}</td>
+                            <td>{{ $boleta['numero'] }}</td>
                         </tr>
                     @endforeach
                 </tbody>

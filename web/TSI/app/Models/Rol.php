@@ -13,4 +13,5 @@ class Rol extends Model
     public function usuarios(){
         return $this->hasMany('App\Models\Usuario');
     }
+    public $primaryKey = 'id';
 }

@@ -51,13 +51,7 @@
                                             <input required type="password" id="password2" name="password2"
                                                 class="form-control @error('password2') is-invalid @enderror"
                                                 value="{{ old('password2') }}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="nombre">Rol:</label>
-                                            <select id="rol" name="rol" class="form-control">
-                                                <option value="1">Administrador</option>
-                                            </select>
-                                        </div>                
+                                        </div>               
                                         <div class="form-group">
                                             <div class="row pt-3">
                                                 <div class="col-12 col-lg-3 offset-lg-6 pr-lg-0">

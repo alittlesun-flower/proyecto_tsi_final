@@ -21,6 +21,7 @@ class CreateReparacionesTable extends Migration
             $table->String("nombre", 100);
             $table->String("descripcion", 500);
             $table->unsignedInteger("monto");
+            $table->char("estado", 1);
             $table->timestamps();
         });
     }

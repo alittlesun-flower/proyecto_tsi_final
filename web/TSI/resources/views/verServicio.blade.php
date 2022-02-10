@@ -10,8 +10,8 @@
                         <td>Tipo de servicio</td>
                         <td>Cantidad de consumo</td>
                         <td>Monto total</td>
+                        <td>Estado</td>
                         <td>Accion 1</td>
-                        <td>Accion 2</td>
                     </tr>
                 </thead>
                 <tbody id="tbody-servicio">

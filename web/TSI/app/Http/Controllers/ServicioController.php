@@ -15,6 +15,7 @@ class ServicioController extends Controller
     public function crearServicio(Request $request){
         $input = $request->all();
         $servicio = new Servicio();
+        $servicio->estado=$input["estado"];
         $servicio->mes=$input["mes"];
         $servicio->anno=$input["anno"];
         $servicio->tipo=$input["tipo"];
@@ -45,7 +46,14 @@ class ServicioController extends Controller
         $servicio->tipo=$input["tipo"];
         $servicio->consumo=$input["consumo"];
         $servicio->monto=$input["monto"];
+        $servicio->estado=$input["estado"];
         $servicio->save();
         return $servicio;
     }    
+    public function obtenerPorMes(Request $request){
+        $input = $request->all();
+        $mes = $input["mes"];
+        $servicios = Servicio::where('mes','=',$mes)->get();
+        return $servicios;
+    }
 }

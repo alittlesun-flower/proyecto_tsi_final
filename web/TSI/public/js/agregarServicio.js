@@ -1,9 +1,10 @@
 document.querySelector("#servi-btn").addEventListener("click", async()=>{
     let mes = document.querySelector("#mes-cbx").value.trim();
-    let anno = document.querySelector("#anno-cbx").value.trim();
+    let anno = document.querySelector("#anno-txt").value.trim();
     let tipo = document.querySelector("#servicios-cbx").value;
     let consumo = document.querySelector("#consumo-num").value;
     let monto = document.querySelector("#monto-num").value;
+    let estado = '0';
     let errores = [];
     if(consumo === ""){
         errores.push("Debes de ingresar un consumo")
@@ -20,6 +21,7 @@ document.querySelector("#servi-btn").addEventListener("click", async()=>{
     if (errores.length == 0){
         let servi = {};
         servi.mes = mes;
+        servi.estado = estado;
         servi.anno = anno;
         servi.tipo = tipo;
         servi.consumo = consumo;
@@ -36,4 +38,7 @@ document.querySelector("#servi-btn").addEventListener("click", async()=>{
         });
     }
     
+});
+document.addEventListener("DOMContentLoaded", ()=>{
+    document.querySelector("#anno-txt").value="2022";
 });

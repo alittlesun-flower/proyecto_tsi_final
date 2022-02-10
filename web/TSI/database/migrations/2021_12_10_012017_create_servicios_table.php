@@ -20,6 +20,7 @@ class CreateServiciosTable extends Migration
             $table->String("tipo", 100);
             $table->unsignedInteger("consumo");
             $table->unsignedInteger("monto");
+            $table->char("estado", 1);
             $table->timestamps();
         });
     }

@@ -2,6 +2,10 @@ getServicios = async()=>{
 	let resp = await axios.get("api/servicio/get");
 	return resp.data;
 }
+getBoletas = async()=>{
+	let resp = await axios.get("api/boleta/get");
+	return resp.data;
+}
 crearServicio = async(servi)=>{
 	let resp = await axios.post("api/servicio/post", servi, {
 	    headers:{

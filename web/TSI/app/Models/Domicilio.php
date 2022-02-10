@@ -15,5 +15,5 @@ class Domicilio extends Model
     public function boletas(){
         return $this->hasMany(Boleta::class);
     }
-    public $primaryKey = 'id';
+    public $primaryKey = 'numero';
 }

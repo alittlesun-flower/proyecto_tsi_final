@@ -19,9 +19,8 @@
                             <p>Para comenzar a utilizar la aplicación, puedes añadir:
                                 <ul>
                                     <li>1) Servicios</li>
-                                    <li>2) Reparación</li>
-                                    <li>3) Domicilios</li>
-                                    <li>4) Y por último, enviar boleta</li>
+                                    <li>2) Domicilios, si es necesario</li>
+                                    <li>3) Y por último, enviar boleta</li>
                                 </ul>
                             </p>
                         </div>

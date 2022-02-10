@@ -45,7 +45,7 @@ class UsuariosController extends Controller
         $usuario->email = $request->email;
         $usuario->nombre = $request->nombre;
         $usuario->password = Hash::make($request->password);
-        $usuario->rol_id = $request->rol;
+        $usuario->rol_id = 1;
         $data = request()->validate([
             'email' => 'email|unique:usuarios,email,'.$usuario->id,
         ]);

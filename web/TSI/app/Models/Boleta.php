@@ -17,6 +17,8 @@ class Boleta extends Model
     public function domicilios(){
         return $this->belongsTo(Domicilio::class);
     }
-    
+    //public function servicios(){
+    //    return $this->belongsTo(Servicio::class);
+    //}
     public $primaryKey = 'id';
 }

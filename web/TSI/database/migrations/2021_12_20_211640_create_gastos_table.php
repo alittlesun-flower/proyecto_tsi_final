@@ -19,8 +19,8 @@ class CreateGastosTable extends Migration
             $table->foreign('servicio_id')->references('id')->on("servicios");
             $table->unsignedBigInteger('reparacion_id');
             $table->foreign('reparacion_id')->references('id')->on("reparaciones");
-            $table->unsignedBigInteger('domicilio_id');
-            $table->foreign('domicilio_id')->references('id')->on("domicilios");
+            $table->smallInteger('numero_domicilio');
+            $table->foreign('numero_domicilio')->references('numero')->on("domicilios");
             $table->String("mes", 10);
             $table->String("anno", 4);
             $table->timestamps();

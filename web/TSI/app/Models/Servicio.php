@@ -12,5 +12,8 @@ class Servicio extends Model
     public function gastos(){
         return $this->hasMany(Gasto::class);
     }
+    //public function boletas(){
+    //    return $this->hasMany(Boleta::class);
+    //}
     public $primaryKey = 'id';
 }

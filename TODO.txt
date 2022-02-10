@@ -1,0 +1,11 @@
+Verificar que el correo no se repita al editar un domicilio {Véase agregar domicilio para la RegEx}
+Ver que al hacer las boletas por mes, cambie el estado de las boletas
+Que se cargue el monto ya dividido en la sección de boleta.
+Ver que datos se cargarán a la boleta
+
+Cambiar el estado de un servicio al emitir la boleta
+Verificacion de integridad referencial servicio-boleta (no eliminar servicios asociados a boletas)
+Vista usuario
+
+Que no se puedan eliminar domicilios, solo actualizar los datos (correo)
+Verificar que entren siempre 2 servicios a boleta

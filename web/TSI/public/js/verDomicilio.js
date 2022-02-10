@@ -19,7 +19,7 @@ const actualizar = async function(){
     let molde = this.parentNode.parentNode;
     domicilio.numero = molde.querySelector("#numero-num").value;
     domicilio.correo = molde.querySelector("#correo-txt").value;
-    domicilio.metros = molde.querySelector("#metros-cbx").value;
+    //domicilio.metros = molde.querySelector("#metros-cbx").value;
 
 
     await actualizarDomicilio(domicilio);
@@ -34,7 +34,7 @@ const iniciarActualizacion = async function(){
     let molde = document.querySelector(".molde-modificar").cloneNode(true);
     molde.querySelector("#numero-num").value = domicilio.numero;
     molde.querySelector("#correo-txt").value = domicilio.correo;
-    molde.querySelector("#metros-cbx").value = domicilio.metros;
+    //molde.querySelector("#metros-cbx").value = domicilio.metros;
 
     
     molde.querySelector("#domi-btn").idDomicilio = idDomicilio;
@@ -55,14 +55,14 @@ const cargarTabla = (domicilio)=>{
         tdNumero.innerText = domicilio[i].numero
         let tdCorreo = document.createElement("td");
         tdCorreo.innerText = domicilio[i].correo;
-        let tdMetro = document.createElement("td");
-        tdMetro.innerText = domicilio[i].metros;
+        // let tdMetro = document.createElement("td");
+        // tdMetro.innerText = domicilio[i].metros;
         let tdAccion1 = document.createElement("td");
         //ELIMINAR
         let botonEliminar = document.createElement("button");
         botonEliminar.innerText = "Eliminar";
         botonEliminar.classList.add("btn", "btn-danger");
-        botonEliminar.idDomicilio = domicilio[i].id;
+        botonEliminar.idDomicilio = domicilio[i].numero;
         botonEliminar.addEventListener("click", iniciarEliminacion);
         tdAccion1.appendChild(botonEliminar);
         //ACTUALIZAR
@@ -70,14 +70,14 @@ const cargarTabla = (domicilio)=>{
         let botonActualizar = document.createElement("button");
         botonActualizar.innerText = "Actualizar";
         botonActualizar.classList.add("btn","btn-warning");
-        botonActualizar.idDomicilio = domicilio[i].id;
+        botonActualizar.idDomicilio = domicilio[i].numero;
         botonActualizar.addEventListener("click", iniciarActualizacion);
         tdAccion2.appendChild(botonActualizar);
 
 
         tr.appendChild(tdNumero);
         tr.appendChild(tdCorreo);
-        tr.appendChild(tdMetro);
+        // tr.appendChild(tdMetro);
         tr.appendChild(tdAccion1);
         tr.appendChild(tdAccion2);
 
